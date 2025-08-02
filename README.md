@@ -38,3 +38,11 @@ This machine learning system predicts NBA player performance during clutch time 
 git clone https://github.com/YOUR-USERNAME/nba-clutch-factor.git
 cd nba-clutch-factor
 ```
+
+### Reference
+
+Dataset source: https://www.kaggle.com/datasets/schmadam97/nba-playbyplay-data-20182019?resource=download
+
+### Dashboard Demo:
+
+![alt text](<Screenshot 2025-08-02 at 2.56.20 PM.png>)
