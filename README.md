@@ -49,32 +49,4 @@ Dataset source: https://www.kaggle.com/datasets/schmadam97/nba-playbyplay-data-2
 
 ### FolderStructure:
 
-nba-clutch-factor-project/
-│ README.md
-│ requirements.txt
-│ pyproject.toml # if present; otherwise ignore
-│ .env.example # if used
-│
-├─ data/
-│ ├─ raw/ # unmodified source CSV/JSON
-│ ├─ interim/ # intermediate cleaned files
-│ └─ processed/ # final training-ready datasets
-│
-├─ src/
-│ ├─ config.py # paths, constants, seed
-│ ├─ utils/ # small helpers (io, metrics, timing)
-│ ├─ data/ # ingestion + cleaning modules
-│ ├─ features/ # feature engineering
-│ ├─ models/ # training, tuning, inference
-│ └─ evaluation/ # evaluation + reporting
-│
-├─ notebooks/
-│ ├─ 01_eda.ipynb
-│ ├─ 02_feature_checks.ipynb
-│ └─ 03_error_analysis.ipynb
-│
-└─ scripts/
-├─ make_dataset.py
-├─ build_features.py
-├─ train_model.py
-└─ evaluate.py
+![alt text](image.png)
