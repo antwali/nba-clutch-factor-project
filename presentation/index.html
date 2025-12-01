@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Clutch Factor - Presentation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/white.css">
+    <style>
+        .reveal .slides section {
+            text-align: left;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: #1D428A; /* NBA Blue */
+        }
+        .reveal .title-slide {
+            text-align: center;
+        }
+        .reveal .title-slide h1 {
+            font-size: 3em;
+            color: #FF8C00; /* Basketball Orange */
+        }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            font-size: 1.2em;
+        }
+        .feature-list li:before {
+            content: "🏀 ";
+            margin-right: 10px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            min-width: 150px;
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1D428A;
+        }
+        .stat-label {
+            font-size: 1em;
+            color: #666;
+        }
+        .architecture-diagram {
+            font-family: monospace;
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #FF8C00;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Slide 1: Title -->
+            <section class="title-slide">
+                <h1>🏀 NBA Clutch Factor</h1>
+                <h2>Predicting Player Performance in High-Pressure Situations</h2>
+                <p>Machine Learning Project</p>
+                <p style="margin-top: 50px; color: #666;">Press SPACE or arrow keys to navigate</p>
+            </section>
+
+            <!-- Slide 2: Problem Statement -->
+            <section>
+                <h2>The Challenge</h2>
+                <h3>What is "Clutch Time"?</h3>
+                <ul>
+                    <li>Final 5 minutes of game</li>
+                    <li>Score differential ≤ 5 points</li>
+                    <li>High-pressure situations</li>
+                </ul>
+                <div class="highlight">
+                    <strong>The Question:</strong> How will players perform in clutch situations?<br>
+                    Can we predict overperform, expected, or underperform?
+                </div>
+                <p><strong>Why It Matters:</strong> Coaches, fantasy sports, betting, and player evaluation</p>
+            </section>
+
+            <!-- Slide 3: Solution -->
+            <section>
+                <h2>Our Solution</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>Machine Learning System</h3>
+                        <ul class="feature-list">
+                            <li>Predicts clutch performance</li>
+                            <li>3 categories: Overperform, Expected, Underperform</li>
+                            <li>74%+ accuracy</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li>✅ Real-time predictions</li>
+                            <li>📊 Player comparison</li>
+                            <li>📈 Interactive dashboard</li>
+                            <li>💡 Explainable results</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Technology Stack -->
+            <section>
+                <h2>Technology Stack</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li><strong>Streamlit</strong> - Web Dashboard</li>
+                            <li><strong>Plotly</strong> - Visualizations</li>
+                        </ul>
+                        <h3>ML & Data</h3>
+                        <ul>
+                            <li><strong>XGBoost</strong> - Primary Model</li>
+                            <li><strong>Scikit-learn</strong> - ML Algorithms</li>
+                            <li><strong>Pandas</strong> - Data Processing</li>
+                            <li><strong>NumPy</strong> - Numerical Computing</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Core</h3>
+                        <ul>
+                            <li><strong>Python 3.8+</strong></li>
+                        </ul>
+                        <div class="highlight" style="margin-top: 30px;">
+                            <strong>Why This Stack?</strong><br>
+                            Industry standard tools<br>
+                            Rapid development<br>
+                            High performance
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Features -->
+            <section>
+                <h2>Key Features</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>🎯 Real-Time Predictions</h3>
+                        <ul>
+                            <li>Single player predictions</li>
+                            <li>Probability breakdowns</li>
+                            <li>Interactive charts</li>
+                        </ul>
+                        <h3>📊 Player Comparison</h3>
+                        <ul>
+                            <li>Compare up to 5 players</li>
+                            <li>Side-by-side analysis</li>
+                            <li>Visual comparison</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>📈 Model Transparency</h3>
+                        <ul>
+                            <li>Feature importance</li>
+                            <li>Model status</li>
+                            <li>Explainable predictions</li>
+                        </ul>
+                        <h3>💾 Prediction History</h3>
+                        <ul>
+                            <li>Track all predictions</li>
+                            <li>Review past analyses</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Factors -->
+            <section>
+                <h2>What Factors Matter?</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>Game Context</h3>
+                        <ul>
+                            <li>🏠 Home vs Away <strong>(15%)</strong></li>
+                            <li>🏆 Opponent Strength <strong>(25%)</strong></li>
+                            <li>😴 Rest Days <strong>(10%)</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Player Performance</h3>
+                        <ul>
+                            <li>🎯 Season Clutch FG% <strong>(30%)</strong></li>
+                            <li>⏱️ Minutes per Game <strong>(20%)</strong></li>
+                        </ul>
+                        <div class="highlight" style="margin-top: 20px;">
+                            <strong>Result:</strong> Comprehensive prediction considering all factors
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Model Performance -->
+            <section>
+                <h2>Model Performance</h2>
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-number">74.1%</div>
+                        <div class="stat-label">XGBoost ⭐</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">72.3%</div>
+                        <div class="stat-label">Random Forest</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">68.9%</div>
+                        <div class="stat-label">Logistic Regression</div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <strong>Training Data:</strong> NBA play-by-play data (2015-2021)<br>
+                    <strong>Features:</strong> 15+ engineered clutch-specific metrics<br>
+                    <strong>Validation:</strong> Cross-validated and tested on real scenarios
+                </div>
+            </section>
+
+            <!-- Slide 8: Dashboard -->
+            <section>
+                <h2>Interactive Dashboard</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>Features</h3>
+                        <ul>
+                            <li>🎯 <strong>Prediction Tab</strong> - Single player predictions</li>
+                            <li>📈 <strong>Comparison Tab</strong> - Multi-player analysis</li>
+                            <li>📊 <strong>Model Info</strong> - Feature importance</li>
+                            <li>📜 <strong>History</strong> - Prediction tracking</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>User Experience</h3>
+                        <ul>
+                            <li>Clean, intuitive interface</li>
+                            <li>Real-time updates</li>
+                            <li>Interactive charts</li>
+                            <li>No coding required</li>
+                        </ul>
+                        <div class="highlight" style="margin-top: 20px;">
+                            <strong>Launch:</strong><br>
+                            <code>streamlit run src/dashboard/app.py</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Use Cases -->
+            <section>
+                <h2>Real-World Applications</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>🏀 Basketball Analytics</h3>
+                        <ul>
+                            <li>Coach decision-making</li>
+                            <li>Player evaluation</li>
+                            <li>Team strategy</li>
+                        </ul>
+                        <h3>📊 Fantasy Sports</h3>
+                        <ul>
+                            <li>Player selection</li>
+                            <li>Performance prediction</li>
+                            <li>Draft strategy</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>📈 Sports Betting</h3>
+                        <ul>
+                            <li>Probability analysis</li>
+                            <li>Risk assessment</li>
+                            <li>Data-driven decisions</li>
+                        </ul>
+                        <h3>🎓 Research & Education</h3>
+                        <ul>
+                            <li>Sports analytics research</li>
+                            <li>ML education</li>
+                            <li>Data science projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Architecture -->
+            <section>
+                <h2>System Architecture</h2>
+                <div class="architecture-diagram">
+┌─────────────────────────────────────┐
+│   Frontend (Streamlit UI)           │
+│   - User Interface                   │
+│   - Interactive Visualizations       │
+└──────────────┬──────────────────────┘
+               ↓
+┌─────────────────────────────────────┐
+│   Application Layer                 │
+│   - ClutchPredictor Class           │
+│   - Feature Engineering              │
+└──────────────┬──────────────────────┘
+               ↓
+┌─────────────────────────────────────┐
+│   Machine Learning Layer            │
+│   - XGBoost Model                   │
+│   - Scikit-learn Models             │
+└──────────────┬──────────────────────┘
+               ↓
+┌─────────────────────────────────────┐
+│   Data Layer                        │
+│   - Pandas DataFrames                │
+│   - NumPy Arrays                    │
+└─────────────────────────────────────┘
+                </div>
+            </section>
+
+            <!-- Slide 11: Demo -->
+            <section>
+                <h2>Live Demo Walkthrough</h2>
+                <ol style="font-size: 1.2em; line-height: 1.8;">
+                    <li><strong>Select Player</strong> (e.g., LeBron James)</li>
+                    <li><strong>Adjust Game Context</strong>
+                        <ul>
+                            <li>Home/Away</li>
+                            <li>Opponent Strength</li>
+                            <li>Rest Days</li>
+                        </ul>
+                    </li>
+                    <li><strong>Get Prediction</strong>
+                        <ul>
+                            <li>Performance Category</li>
+                            <li>Confidence Score</li>
+                            <li>Probability Breakdown</li>
+                        </ul>
+                    </li>
+                    <li><strong>Compare Players</strong> - Side-by-side analysis</li>
+                </ol>
+                <div class="highlight" style="margin-top: 30px;">
+                    <strong>Try it:</strong> <code>streamlit run src/dashboard/app.py</code>
+                </div>
+            </section>
+
+            <!-- Slide 12: Insights -->
+            <section>
+                <h2>Key Insights</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>What We Learned</h3>
+                        <ul>
+                            <li>Historical clutch performance is strongest predictor (30%)</li>
+                            <li>Opponent strength significantly impacts (25%)</li>
+                            <li>Home court advantage matters (15%)</li>
+                            <li>Rest days have moderate impact (10%)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Surprising Findings</h3>
+                        <ul>
+                            <li>Some players consistently overperform in clutch</li>
+                            <li>Game context matters more than raw talent alone</li>
+                            <li>Minutes per game indicates role importance</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 13: Future -->
+            <section>
+                <h2>Future Enhancements</h2>
+                <div class="two-column">
+                    <div>
+                        <h3>Short Term</h3>
+                        <ul>
+                            <li>✅ Real-time NBA API integration</li>
+                            <li>✅ Advanced feature engineering</li>
+                            <li>✅ Model retraining pipeline</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Long Term</h3>
+                        <ul>
+                            <li>🔄 Live game predictions</li>
+                            <li>📱 Mobile app version</li>
+                            <li>🌐 REST API for developers</li>
+                            <li>📊 Advanced analytics</li>
+                            <li>🤖 Deep learning models</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 14: Conclusion -->
+            <section class="title-slide">
+                <h1>Thank You!</h1>
+                <div style="text-align: left; margin-top: 50px;">
+                    <h2>Summary</h2>
+                    <ul style="font-size: 1.2em;">
+                        <li>Machine learning system for clutch performance prediction</li>
+                        <li>74%+ accuracy with XGBoost model</li>
+                        <li>Interactive dashboard for easy use</li>
+                        <li>Comprehensive game context analysis</li>
+                    </ul>
+                    <div class="highlight" style="margin-top: 30px;">
+                        <strong>Questions?</strong><br>
+                        🏀 Demo: <code>streamlit run src/dashboard/app.py</code><br>
+                        📖 GitHub: [Your Repository]
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            hash: true,
+            controls: true,
+            progress: true,
+            center: false,
+            transition: 'slide'
+        });
+    </script>
+</body>
+</html>
+
+
